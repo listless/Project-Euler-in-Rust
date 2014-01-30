@@ -18,6 +18,16 @@ After you have installed Rust:
 3. Compile the example using Rust's compiler `rustc "Problem xxx.rs"`
 4. Run the executable
 
+###FAQ
+<i>These solutions are poor!  I know better solutions!</i>
+
+I would gladly like to see other solutions to these problems in Rust!  As I'm still learning, my take on the solutions may be pretty amateurish, so I'm very open to learning better ways of solving these problems in Rust!
+
+<i>Why did you do `this` or `that`? It's unnecessary / inefficient / incorrect!</i>
+
+If you come across anything that seems wrong or badly implemented, please make an [issue](https://github.com/listless/Project-Euler-in-Rust/issues "Link to this Repository's Issue Tracker page")!  
+I'd be very grateful to learn more about Rust, programming and problem solving!
+
 ###Project Euler and Rust
 - [Project Euler](http://projecteuler.net/ "Project Euler's Official Website")
 
