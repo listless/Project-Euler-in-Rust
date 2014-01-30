@@ -6,7 +6,7 @@ To learn the Rust Programming Language with the aid of Project Euler problems.
 
 ###Compilation and Running
 
-All solutions are written and updated for the latest stable Rust release on windows: [currently version 0.9](https://github.com/mozilla/rust/wiki/Using-Rust-on-Windows "Link to Rust's Windows installer guide")
+All solutions are written and updated for the latest stable Rust release on Windows: [version 0.9](https://github.com/mozilla/rust/wiki/Using-Rust-on-Windows "Link to Rust's Windows installer guide")
  
 To compile and run the solutions, first follow [Rust's Quick Start guide](https://github.com/mozilla/rust "Link to Rust's Quick Start guide on github") on Github and install Rust for your corresponding system from [Rust's Official Website](http://www.rust-lang.org/ "Rust's Official Website").
 
