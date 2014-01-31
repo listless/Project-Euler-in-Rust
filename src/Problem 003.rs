@@ -1,11 +1,10 @@
 use std::num::sqrt;
 
 fn main() {
-	let mut factors: ~[u64] = ~[];
-	let max: u64 = 600851475143;
-	//600851475143
+	let mut factors: ~[i64] = ~[];
+	let max: i64 = 600851475143;
 	for i in range(1, max) {
-		if (i >= sqrt(max as f64) as u64) {
+		if (i >= sqrt(max as f64) as i64) {
 			factors.push(max / i);	
 			break;
 		}
@@ -15,7 +14,7 @@ fn main() {
 		}
 	}
 
-	let mut prime_factors: ~[u64] = ~[];
+	let mut prime_factors: ~[i64] = ~[];
 
 	'factor_loop: 
 	for i in factors.iter() {
