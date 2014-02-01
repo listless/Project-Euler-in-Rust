@@ -12,7 +12,7 @@ fn main() {
 	println(highest_starting_number.to_str());
 }
 
-fn numbers_in_chain(num: i64) -> i64 { // Use 64 bit as 32 bit is too small (causes stack overflow if arg is 999167).
+fn numbers_in_chain(num: i64) -> i64 { // Use 64 bit as 32 bit is too small (causes stack overflow if arg is 999167)
 	if num == 1 { 
 		1
 	} else if num % 2 == 0 {
