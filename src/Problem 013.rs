@@ -108,16 +108,13 @@ fn main() {
 	let mut result: ~str = ~"";
 
 	for i in range(0, num_strs[0].len()) {
-
 		column_sum = 0;
-
 		for string in num_strs.iter() {
 			column_sum += match from_str::<int>(string.slice_chars(index - 1, index)) {
 				Some(x) => x,
 				None => fail!("Conversion failed!")
 			};
 		}
-
 		column_sum += carry;
 		carry = column_sum / 10;
 		result = (column_sum % 10).to_str() + result;
