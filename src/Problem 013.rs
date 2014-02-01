@@ -120,7 +120,7 @@ fn main() {
 		result = (column_sum % 10).to_str() + result;
 		index -= 1;
 	}
-	result = (carry).to_str() + result;
+	result = carry.to_str() + result;
 
 	// Print the first ten digits of the result
 	println(result.slice_to(10));
