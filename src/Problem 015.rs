@@ -13,8 +13,8 @@ fn routes_in_grid(max_x: int, max_y: int, x: int, y: int, cache: &mut HashMap<(i
 
 	if x < max_x {
 		if cache.contains_key(&(x, y)) || cache.contains_key(&(y, x)) {
-			number_of_routes = *cache.get(&(x, y));
-			return number_of_routes;
+			return *cache.get(&(x, y));
+			
 		} else {
 			number_of_routes += routes_in_grid(max_x, max_y, x + 1, y, cache);
 		}
@@ -22,8 +22,7 @@ fn routes_in_grid(max_x: int, max_y: int, x: int, y: int, cache: &mut HashMap<(i
 
 	if y < max_y {
 		if cache.contains_key(&(x, y)) || cache.contains_key(&(y, x)) {
-			number_of_routes = *cache.get(&(x, y));
-			return number_of_routes;
+			return *cache.get(&(x, y));
 		} else {
 			number_of_routes += routes_in_grid(max_x, max_y, x, y + 1, cache);
 		}
