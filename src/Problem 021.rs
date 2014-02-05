@@ -22,15 +22,12 @@ fn main() {
 		}
 	}
 
-	println!("{:?}", amicable_pairs);
-
 	let mut sum_of_amicable_pairs: int = 0;
 	for pair in amicable_pairs.iter() {
 		sum_of_amicable_pairs += *pair;
-		print(pair.to_str() + " ");
 	}
 
-	println("\n" + sum_of_amicable_pairs.to_str());
+	println("Sum of amicable pairs is... " + sum_of_amicable_pairs.to_str() + " !");
 }
 
 // Proper divisors: Numbers less than n which divide evenly into n
