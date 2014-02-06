@@ -37,7 +37,7 @@ fn sum_of_proper_divisors(number: int) -> int {
 	} else {
 		let mut sum: int = - number;
 
-		for i in count(1, 1).take_while(|&i| i * i < number) {
+		for i in count(1, 1).take_while(|&i| i * i <= number) {
 			if number % i == 0 {
 				sum += i;
 				sum += number / i;
