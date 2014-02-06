@@ -29,21 +29,17 @@ fn main() {
 }
 
 fn sum_of_proper_divisors(number: int) -> int {
-	if number == 1 {
-		0
-	} else {
-		let mut sum: int = -number;
+	let mut sum: int = -number;
 
-		for i in count(1, 1).take_while(|&i| i * i <= number) {
-			if number % i == 0 {
-				sum += i;
-				sum += number / i;
+	for i in count(1, 1).take_while(|&i| i * i <= number) {
+		if number % i == 0 {
+			sum += i;
+			sum += number / i;
 
-				if i * i == number {
-					sum -= i;
-				}
+			if i * i == number {
+				sum -= i;
 			}
 		}
-		sum
 	}
+	sum
 }
