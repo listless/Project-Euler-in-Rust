@@ -21,10 +21,7 @@ fn main() {
 		for character in names[i].chars() {
 			score += match to_digit(character, 36) {
 				Some(x) => x as int - 9, // -9 to get alphabetical value
-				None => { 
-					println("Conversion failed!");
-					0
-				}
+				None => fail!("Conversion failed!")
 			}
 		}
 		score *= i as int + 1;
