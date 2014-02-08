@@ -13,7 +13,7 @@ fn main() {
 
 fn fibonacci(term: int, cache: &mut HashMap<int, ~str>) -> ~str {
 	if term == 1 || term == 2 {
-		return ~"1";
+		~"1"
 	} else if cache.contains_key(&term) {
 		cache.get(&term).clone()
 	} else {
