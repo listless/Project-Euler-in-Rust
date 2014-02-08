@@ -12,7 +12,7 @@ fn main() {
 fn next_lexicographic_permutation(vec: &mut ~[int]) {
 	let size = vec.len() - 1;
 
-	for i in range(0, size).invert() { // invert() has been changed to rev() in the Rust Master branch
+	for i in range(0, size).invert() { // invert() has been changed to rev() in the Rust Master branch (Post ver.0.9)
 		let distance_from_end = size - i;
 
 		for j in range(0, distance_from_end) {
