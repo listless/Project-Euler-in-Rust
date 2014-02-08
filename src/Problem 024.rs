@@ -6,7 +6,7 @@ fn main() {
 		next_lexicographic_permutation(&mut digits);
 	}
 
-	println!("{:?}", digits);
+	println!("The millionth lexicographic permutation is {:?}!", digits);
 }
 
 fn next_lexicographic_permutation(vec: &mut ~[int]) {
