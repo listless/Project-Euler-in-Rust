@@ -76,7 +76,7 @@ fn find_repetend(decimal: &~str, denominator: int) -> ~str {
 					return decimal.slice(start, left_index).to_owned();
 				}
 			}
-			// Incorrect start of repetend, reset indices whilst retaining same seperation
+			// Invalid repetend, reset indices whilst retaining same seperation
 			right_index = start + (right_index - left_index);
 			left_index = start;
 		}
