@@ -62,7 +62,7 @@ fn find_repetend(decimal: &~str, denominator: int) -> ~str {
 
 		// Possible start of repetend found, move both indices forwards to check all digits of repetend are correct
 		if (decimal.char_at(right_index) == decimal.char_at(left_index)) {
-			while (decimal.char_at(right_index + 1) == decimal.char_at(left_index + 1)) {
+			while (decimal.char_at(right_index) == decimal.char_at(left_index)) {
 				// Repetend verified, move indices backwards before returning it to find correct start of repetend
 				if (decimal.char_at(right_index) == decimal.char_at(start)) && (right_index - left_index == left_index - start) {
 					while decimal.char_at(start - 1) == decimal.char_at(left_index - 1) {
