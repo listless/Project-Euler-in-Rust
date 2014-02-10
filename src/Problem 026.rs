@@ -49,7 +49,6 @@ fn generate_recurring_decimal(denominator: int) -> (~str, bool) {
 			break;
 		}
 	}
-
 	return (decimal, is_recurring);
 }
 
@@ -63,7 +62,7 @@ fn find_repetend(decimal: &~str, denominator: int) -> ~str {
 
 		// Possible start of repetend found, move both indices forwards to check all digits of repetend are correct
 		if (decimal.char_at(right_index) == decimal.char_at(left_index)) {
-			while (decimal.char_at(right_index) == decimal.char_at(left_index)) {
+			while (decimal.char_at(right_index + 1) == decimal.char_at(left_index + 1)) {
 				right_index += 1;
 				left_index += 1;
 
