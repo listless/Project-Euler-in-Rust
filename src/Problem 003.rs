@@ -1,32 +1,27 @@
-use std::num::sqrt;
+use std::iter::count;
 
 fn main() {
-	let mut factors: ~[i64] = ~[];
 	let max: i64 = 600851475143;
-	for i in range(1, max) {
-		if (i >= sqrt(max as f64) as i64) {
-			factors.push(max / i);	
-			break;
-		}
-		if max % i == 0 {
-			factors.push(i);
-			factors.push(max / i);
-		}
-	}
+	let mut prime_factors: ~[i64] = prime_factors(max);
 
+	println!("Largest prime factor is {:d}", prime_factors[prime_factors.len()-1] as int);
+}
+
+fn prime_factors(mut num: i64) -> ~[i64] {
 	let mut prime_factors: ~[i64] = ~[];
 
-	'factor_loop: 
-	for i in factors.iter() {
-		for num in range(2, i-1) {
-			if i % num == 0 {
-				continue 'factor_loop;
-			}
-		}
-		prime_factors.push(*i);
+	while num % 2 == 0 {
+		prime_factors.push(2);
+		num /= 2;
 	}
-
-	println!("{:?}", factors);
-	println!("{:?}", prime_factors);
-	println!("Largest prime factor is {:d}", prime_factors[prime_factors.len()-1] as int);
+	for i in count(3 as i64, 2 as i64).take_while(|&i| i*i <= num) {
+		while num % i == 0 {
+			prime_factors.push(i);
+			num /= i;
+		}
+	}
+	if num > 2 {
+		prime_factors.push(num);
+	}
+	prime_factors
 }
