@@ -16,7 +16,7 @@ fn main() {
 		}
 	}
 
-	println!("Product of the coefficents, a and b, for the quadratic expression that produces the max num is... {:d}!", highest_a*highest_b);
+	println!("Product of the coefficents, a and b, for the quadratic expression that produces the max num of primes is... {:d}!", highest_a*highest_b);
 }
 
 fn num_of_primes(a: int, b: int) -> int {
