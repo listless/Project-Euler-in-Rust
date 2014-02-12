@@ -4,13 +4,13 @@ use std::iter::count;
 
 fn main() {
 
-	let mut distinct_terms: HashSet<(int, int)> = HashSet::new();
+	let mut distinct_terms: int = 0;
 	let mut distinct_prime_factors: HashSet<~[int]> = HashSet::new();
 
 	for a in range_inclusive(2, 100) {
 		for b in range_inclusive(2, 100) {
 			if check_if_prime(&a) {
-				distinct_terms.insert((a, b));
+				distinct_terms += 1;
 			} else {
 				let mut power_prime_factors: ~[int] = ~[];
 				for i in range(0, b) {
@@ -22,13 +22,13 @@ fn main() {
 					power_prime_factors.sort_by(|a, b| a.cmp(b));
 					if !distinct_prime_factors.contains(&power_prime_factors) {
 						distinct_prime_factors.insert(power_prime_factors);
-						distinct_terms.insert((a, b));
+						distinct_terms += 1;
 					}
 				}
 			}
 		}
 	}
-	println("The number of distinct terms are " + distinct_terms.len().to_str() + "!");
+	println("The number of distinct terms are " + distinct_terms.to_str() + "!");
 }
 
 fn prime_factors(mut num: int) -> ~[int] {
