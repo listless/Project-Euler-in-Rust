@@ -23,8 +23,6 @@ fn main() {
 					Some(x) => temp_vec.push(x),
 					None => fail!("Conversion failed!")
 				};
-			} else {
-				temp_vec.push(00);
 			}
 		}
 		triangle.push(temp_vec);
