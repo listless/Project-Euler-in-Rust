@@ -19,12 +19,12 @@ fn number_of_ways(index: uint, collected_value: int, coins: &~[int], target: int
 				ways += 1;
 			}
 		}
-		ways
+		return ways;
 	} else {
 		let mut ways: int = 0;
 		for value in iter::count(0, coins[index]).take_while(|&value| value <= target - collected_value) {
 			ways += number_of_ways(index - 1, collected_value + value, coins, target);
 		}
-		ways
+		return ways;
 	}
 }
