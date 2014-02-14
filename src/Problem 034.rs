@@ -1,5 +1,5 @@
 fn main() {
-	/* The limit can be found by checking n * 9!, where the value of n should be equal to the number of digits of the value.
+	/* The limit can be found by checking n * 9!, where the value of n should be equal to the number of digits of the result.
 	 * We know the limit is 7 * 9! because 8 * 9! gives us 2903040, a value with less than 8 digits,
 	 * whereas 7 * 9! gives us 2540160, a number with exactly 7 digits.
 	 */
