@@ -25,11 +25,12 @@ fn main() {
 
 
 /* Must provide positive integer greater than 1.
-   Calculates decimal using long division.
-   Returns tuple containing:
-   - str: Decimal number of length (denominator*2 + 3*(1 + log(denominator))), a decimal of this length
-   should include the repetend twice (if exists) 
-   - bool: True if decimal is recurring, False if it terminates */
+ * Calculates decimal using long division.
+ * Returns tuple containing:
+ * - str: Decimal number of length (denominator*2 + 3*(1 + log(denominator))), a decimal of this length
+ * should include the repetend twice (if exists) 
+ * - bool: True if decimal is recurring, False if it terminates 
+ */
 fn generate_recurring_decimal(denominator: int) -> (~str, bool) {
 	let mut decimal: ~str = ~"0.";
 	let mut remainder: int = 10;
